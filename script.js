@@ -29,7 +29,7 @@ noBtn.addEventListener("click", () => {
 
 // YES clicked
 yesBtn.addEventListener("click", () => {
-  msg.textContent = "✅ Correct answer! You made him happy 😍";
+  msg.textContent = "✅ Yayyy!! ❤️😍 You just made my day 💕";
 
   // change image to GIF
   img.src = "happy.gif";
