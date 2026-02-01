@@ -2,33 +2,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
   height: 100vh;
-  background: #fce4ec;
+  background: #ffe6ee;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .card {
-  background: #fff;
-  padding: 30px;
+  background: white;
+  padding: 25px;
   width: 320px;
   text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card img {
-  width: 200px;
+  width: 100px;
   margin-bottom: 10px;
 }
 
-.card h2 {
-  margin-bottom: 20px;
+h2 {
+  margin-bottom: 10px;
+}
+
+#msg {
+  min-height: 24px;
+  margin-bottom: 15px;
+  color: #e91e63;
+  font-weight: bold;
 }
 
 .buttons {
@@ -37,11 +44,11 @@ body {
 }
 
 button {
-  padding: 10px 25px;
+  padding: 10px 22px;
   border: none;
-  border-radius: 25px;
-  font-size: 16px;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 #yesBtn {
@@ -53,5 +60,3 @@ button {
   background: #ccc;
   position: absolute;
 }
-
-
