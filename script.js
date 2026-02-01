@@ -1,69 +1,36 @@
+const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
-const card = document.getElementById("card");
+const msg = document.getElementById("msg");
+const img = document.getElementById("mainImg");
 
-noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 100 - 50;
+let noCount = 0;
 
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
-
-noBtn.addEventListener("click", () => {
-  card.innerHTML = `
-    <h2>❌ Wrong Answer 😜</h2>
-    <p>Try again... you know the right one 😉</p>
-  `;
-});
-
-yesBtn.addEventListener("click", () => {
-  card.innerHTML = `
-    <h2>Yayyy!! ❤️😍</h2>
-    <p>You just made my day 💕</p>
-  `;
-});
-/*const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
-const card = document.getElementById("card");
-
-function moveNoButton(e) {
-  const btnRect = noBtn.getBoundingClientRect();
-
-  const mouseX = e.clientX || (e.touches && e.touches[0].clientX);
-  const mouseY = e.clientY || (e.touches && e.touches[0].clientY);
+// Move NO button when cursor comes near
+document.addEventListener("mousemove", (e) => {
+  const rect = noBtn.getBoundingClientRect();
 
   const distance = Math.hypot(
-    mouseX - (btnRect.left + btnRect.width / 2),
-    mouseY - (btnRect.top + btnRect.height / 2)
+    e.clientX - (rect.left + rect.width / 2),
+    e.clientY - (rect.top + rect.height / 2)
   );
 
-  // sensitivity radius (increase = harder)
-  if (distance < 120) {
-    const x = Math.random() * 300 - 150;
-    const y = Math.random() * 200 - 100;
-
+  if (distance < 100) {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 120 - 60;
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
   }
-}
-
-// desktop
-document.addEventListener("mousemove", moveNoButton);
-
-// mobile
-document.addEventListener("touchmove", moveNoButton);
-
-// if NO somehow gets clicked
-noBtn.addEventListener("click", () => {
-  card.innerHTML = `
-    <h2>❌ Wrong Answer 😜</h2>
-    <p>Try again... you know the right one 😉</p>
-  `;
 });
 
-// YES click
+// If NO is clicked (just in case)
+noBtn.addEventListener("click", () => {
+  noCount++;
+  msg.textContent = `❌ Wrong answer 😄 Try again (${noCount})`;
+});
+
+// YES clicked
 yesBtn.addEventListener("click", () => {
-  card.innerHTML = `
-    <h2>Yayyy!! ❤️😍</h2>
-    <p>You just made my day 💕</p>
-  `;
-});*/
+  msg.textContent = "✅ Correct answer! You made him happy 😍";
+
+  // change image to GIF
+  img.src = "happy.mp4";
+});
