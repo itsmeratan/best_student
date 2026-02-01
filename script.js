@@ -15,7 +15,7 @@ yesBtn.addEventListener("click", () => {
     <p>You just made my day 💕</p>
   `;
 });*/
-/*const noBtn = document.getElementById("noBtn");
+const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const card = document.getElementById("card");
 
@@ -31,7 +31,7 @@ function moveNoButton(e) {
   );
 
   // sensitivity radius (increase = harder)
-  if (distance < 120) {
+  if (distance < 60) {
     const x = Math.random() * 300 - 150;
     const y = Math.random() * 200 - 100;
 
@@ -60,8 +60,8 @@ yesBtn.addEventListener("click", () => {
     <p>You just made my day 💕</p>
   `;
 });
-*/
-const noBtn = document.getElementById("noBtn");
+
+/*const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const msg = document.getElementById("msg");
 const canvas = document.getElementById("confetti");
@@ -157,5 +157,5 @@ function confetti() {
     if (frame < 120) requestAnimationFrame(animate);
   }
   animate();
-}
+}*/
 
