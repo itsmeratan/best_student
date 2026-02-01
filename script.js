@@ -33,4 +33,8 @@ yesBtn.addEventListener("click", () => {
 
   // change image to GIF
   img.src = "happy.gif";
+
+  // hide both buttons
+  yesBtn.style.display = "none";
+  noBtn.style.display = "none";
 });
