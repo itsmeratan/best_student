@@ -54,16 +54,4 @@ button {
   position: absolute;
 }
 
-#msg {
-  margin: 10px 0;
-  font-weight: 600;
-  color: #e91e63;
-}
-
-#confetti {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
 
