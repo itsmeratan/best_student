@@ -32,5 +32,5 @@ yesBtn.addEventListener("click", () => {
   msg.textContent = "✅ Correct answer! You made him happy 😍";
 
   // change image to GIF
-  img.src = "happy.mp4";
+  img.src = "happy.gif";
 });
