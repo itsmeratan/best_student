@@ -24,9 +24,11 @@ body {
 }
 
 .card img {
-  width: 200px;
-  margin-bottom: 10px;
+  width: 300px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
+
 
 h2 {
   margin-bottom: 10px;
@@ -60,4 +62,11 @@ button {
 #noBtn {
   background: #ccc;
   position: absolute;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 90%;
+    min-height: auto;
+  }
 }
